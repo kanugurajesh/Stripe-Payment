@@ -4,31 +4,23 @@
 </p>
 <br>
 
-# User Authentication 🔑
+# Stripe Payment 🔑
 
-This project is used to provide Authentication as a service to the users who want to develop web applications.Developers can build their dream projects on top of this project.
-
-### Problem Statement ❓
-
-Many Developers need a proper Authentication system for securing their web applications but Authentication system is hard to implement and if we use third party services it costs a lot.
-
-### Solution Statement 💡
-
-This project is aimed at solving the above Problem this project uses mongodb atlas shared version to handle customers and nodemailer to verify users all of it at zero cost, complete security and with proper project structure.
+This project is used to provide guidance about how to implement payment integration and payment flow in react.js with typescript
 
 ## Installation
 
 Install my-project with npm
 
 ```bash
-  git clone https://github.com/rajesh604/userAuth
-  cd userAuth
+  git clone https://github.com/rajesh604/stripe-payment
+  cd stripe-payment
   npm install
   npm run build
   npm run start
 ```
 
-The project will be running on http://localhost:8000
+The project will be running on http://localhost:4242
 
 ## Demo
 
