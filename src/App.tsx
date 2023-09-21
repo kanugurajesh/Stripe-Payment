@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-
 import CheckoutForm from "./CheckoutForm";
+import FlashPage from "./FlashPage";
 import "./App.css";
 
 const stripePromise = loadStripe("pk_test_51NrcttSCDEqSrHhxWMsNUDugNs01QkBQqAVhHJogmWRtcWUewmZyRwTc7HwP8fHiKxJxM25Vrl05vlAeWTJX1L1Y002bmePhHW");
@@ -10,6 +10,7 @@ const stripePromise = loadStripe("pk_test_51NrcttSCDEqSrHhxWMsNUDugNs01QkBQqAVhH
 export default function App() {
   const [clientSecret, setClientSecret] = useState<string>("");
   const [paymentSuccess, setPaymentSuccess] = useState<boolean>(false);
+  const [showFlash, setShowFlash] = useState<boolean>(true);
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
@@ -34,7 +35,8 @@ export default function App() {
     <div className="App">
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          {paymentSuccess ? (
+          {showFlash && <FlashPage setShowFlash={setShowFlash}/>}
+          {paymentSuccess && showFlash != true? (
             <div>
               <h2>Payment successful!</h2>
               <p>
@@ -42,7 +44,7 @@ export default function App() {
               </p>
             </div>
           ) : (
-            <CheckoutForm setPaymentSuccess={setPaymentSuccess}/>
+            (showFlash != true) && <CheckoutForm setPaymentSuccess={setPaymentSuccess}/>
           )}
         </Elements>
       )}

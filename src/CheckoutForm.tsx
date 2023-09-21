@@ -10,6 +10,7 @@ export default function CheckoutForm({ setPaymentSuccess }:any) {
   const stripe = useStripe();
   const elements = useElements();
 
+  // @ts-ignore
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -55,7 +56,6 @@ export default function CheckoutForm({ setPaymentSuccess }:any) {
 
   const handleSubmit = async (e:any) => {
     e.preventDefault();
-    console.log(email);
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
