@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-    <img width="200" style="margin:15px" src="https://ik.imagekit.io/hbzknb1hm/authentication%20(1).png?updatedAt=1695063575857" alt="User Authentication">
+    <img width="200" style="margin:15px" src="https://ik.imagekit.io/hbzknb1hm/stripe.png?updatedAt=1695311964773" alt="User Authentication">
 </p>
 <br>
 
