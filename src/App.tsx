@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
-import FlashPage from "./FlashPage";
 import "./App.css";
 
 // import values from .env in vite
@@ -11,7 +10,6 @@ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as 
 export default function App() {
   const [clientSecret, setClientSecret] = useState<string>("");
   const [paymentSuccess, setPaymentSuccess] = useState<boolean>(false);
-  const [showFlash, setShowFlash] = useState<boolean>(true);
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
@@ -36,8 +34,7 @@ export default function App() {
     <div className="App">
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          {showFlash && <FlashPage setShowFlash={setShowFlash}/>}
-          {paymentSuccess && showFlash != true? (
+          {paymentSuccess ? (
             <div>
               <h2>Payment successful!</h2>
               <p>
@@ -45,7 +42,7 @@ export default function App() {
               </p>
             </div>
           ) : (
-            (showFlash != true) && <CheckoutForm setPaymentSuccess={setPaymentSuccess}/>
+            <CheckoutForm setPaymentSuccess={setPaymentSuccess}/>
           )}
         </Elements>
       )}
