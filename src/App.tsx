@@ -5,7 +5,8 @@ import CheckoutForm from "./CheckoutForm";
 import FlashPage from "./FlashPage";
 import "./App.css";
 
-const stripePromise = loadStripe("pk_test_51NrcttSCDEqSrHhxWMsNUDugNs01QkBQqAVhHJogmWRtcWUewmZyRwTc7HwP8fHiKxJxM25Vrl05vlAeWTJX1L1Y002bmePhHW");
+// import values from .env in vite
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string);
 
 export default function App() {
   const [clientSecret, setClientSecret] = useState<string>("");
