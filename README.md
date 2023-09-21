@@ -24,8 +24,8 @@ The project will be running on http://localhost:4242
 
 ## Demo
 
-[<img src="https://ik.imagekit.io/hbzknb1hm/Screenshot%202023-09-18%20064958.png?updatedAt=1695034253537" width="600" height="300"
-/>](https://www.youtube.com/embed/cVpG4fFyIMo?si=NCi_HsxJ9ju9ySio)
+[<img src="https://ik.imagekit.io/hbzknb1hm/stripe.png?updatedAt=1695311964773" width="600" height="300"
+/>](https://youtu.be/Atp7zLEkWDw?si=xMjoOwtlmX2BjIua)
 
 ## Screenshots
 
