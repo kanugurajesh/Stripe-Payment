@@ -29,14 +29,14 @@ The project will be running on http://localhost:4242
 
 ## Screenshots
 
-### Register
-![Screenshot 2023-09-18 063609](https://github.com/rajesh604/userAuth/assets/77529419/170b3867-886d-41fe-aa3e-30a4bcbeb199)
+### Payment Screen
+![payment screen](https://ik.imagekit.io/hbzknb1hm/Screenshot%202023-09-22%20002737.png?updatedAt=1695322733220)
 
-### Login
-![Screenshot 2023-09-18 063613](https://github.com/rajesh604/userAuth/assets/77529419/82a4fb42-d234-4ec7-ae3b-1a3d8eb4f532)
+### Payment Processing
+![Payment Processing](https://ik.imagekit.io/hbzknb1hm/Screenshot%202023-09-22%20002802.png?updatedAt=1695322839153)
 
-### Forget Password
-![Screenshot 2023-09-18 063618](https://github.com/rajesh604/userAuth/assets/77529419/be262fa8-d4da-400d-82fa-cfec6336615f)
+### End Screen
+![End Screen](https://ik.imagekit.io/hbzknb1hm/Screenshot%202023-09-22%20002818.png?updatedAt=1695322886971)
 
 ## Usage
 
