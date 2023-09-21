@@ -6,7 +6,7 @@
 
 # Stripe Payment 🔑
 
-This project is used to provide guidance about how to implement payment integration and payment flow in <code>react.js</code> with <code>typescript</code>
+This project is used to provide guidance about how to implement payment integration and payment flow in <code><B>react.js</B></code> with <code><B>typescript</B></code>
 
 ## Installation
 
