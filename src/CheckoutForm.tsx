@@ -6,7 +6,7 @@ import {
   useElements
 } from "@stripe/react-stripe-js";
 
-export default function CheckoutForm() {
+export default function CheckoutForm({ setPaymentSuccess }:any) {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -44,6 +44,14 @@ export default function CheckoutForm() {
       }
     });
   }, [stripe]);
+
+  useEffect(() => {
+    if (message === "Payment succeeded!") {
+      setTimeout(() => {
+        setPaymentSuccess(true);
+      }, 2000);
+    }
+  },[message])
 
   const handleSubmit = async (e:any) => {
     e.preventDefault();

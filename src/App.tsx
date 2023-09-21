@@ -9,6 +9,7 @@ const stripePromise = loadStripe("pk_test_51NrcttSCDEqSrHhxWMsNUDugNs01QkBQqAVhH
 
 export default function App() {
   const [clientSecret, setClientSecret] = useState<string>("");
+  const [paymentSuccess, setPaymentSuccess] = useState<boolean>(false);
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
@@ -19,7 +20,6 @@ export default function App() {
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-      // console.log(message);
   }, []);
 
   const appearance = {
@@ -34,7 +34,16 @@ export default function App() {
     <div className="App">
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm />
+          {paymentSuccess ? (
+            <div>
+              <h2>Payment successful!</h2>
+              <p>
+                Go to your <a href="https://dashboard.stripe.com/test/payments">Stripe dashboard</a> to see the payment.
+              </p>
+            </div>
+          ) : (
+            <CheckoutForm setPaymentSuccess={setPaymentSuccess}/>
+          )}
         </Elements>
       )}
     </div>
