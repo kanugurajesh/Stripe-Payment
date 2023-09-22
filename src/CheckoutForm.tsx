@@ -77,6 +77,7 @@ export default function CheckoutForm({ setPaymentSuccess }:any) {
     // your `return_url`. For some payment methods like iDEAL, your customer will
     // be redirected to an intermediate site first to authorize the payment, then
     // redirected to the `return_url`.
+    
     if (error.type === "card_error" || error.type === "validation_error") {
       setMessage(error.message?.toString() || "An unexpected error occurred.");
     } else {
@@ -102,7 +103,6 @@ export default function CheckoutForm({ setPaymentSuccess }:any) {
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>
       </button>
-      {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
     </form>
   );
