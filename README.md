@@ -1,3 +1,5 @@
+#### ⭐ star this repo if you like it
+
 <br>
 <p align="center">
     <img width="200" style="margin:15px" src="https://ik.imagekit.io/hbzknb1hm/stripe.png?updatedAt=1695311964773" alt="User Authentication">
